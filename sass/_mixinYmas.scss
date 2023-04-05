@@ -1,0 +1,19 @@
+
+@mixin bordes {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+
+@mixin btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid black ;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+@mixin btnHover {
+   background-color: red;
+   color: white;
+}

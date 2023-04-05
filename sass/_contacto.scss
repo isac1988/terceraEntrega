@@ -1,0 +1,118 @@
+/* contacto */
+
+.contacto{
+    display: flex;
+    @include bordes;
+    justify-content: center;
+
+}
+
+
+.boxForm {
+    display: flex;
+    justify-content: space-around;
+    @include bordes;
+
+    input{
+        background-color: rgb(159, 222, 238);
+    }
+    textarea{
+        background-color: rgb(159, 222, 238);
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 7fr 1fr;
+        justify-items: end;
+        color: white;
+
+        .botones {
+            
+
+            .boton-1 {
+                @include btn;
+                background-color: greenyellow;
+
+                &:hover{
+                    @include btnHover;
+                }
+
+
+            }
+            .boton-2 {
+                @include btn;
+                background-color: green;
+
+                &:hover{
+                    @include btnHover;
+                }
+            }
+        }
+
+    }
+
+    .iframe{
+        align-self: center;
+    }
+        
+}
+
+.imgContact {
+    @include bordes;
+    display: flex;
+    gap: 5px;
+
+    img {
+        max-width: 749px;
+        min-width: 100px;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* ------------------medias--------------------------------------------------- */
+    
+@media (max-width:576px) {
+
+    .boxForm {
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "formulario" "formulario" "iframe";
+    justify-items: center;
+    padding: 5px;
+    border: 2px solid black;
+
+    .form {
+        grid-area: formulario;
+    }
+
+    .iframe {
+        grid-area: iframe;
+        max-width: 250px;
+    }
+}
+}
+
+@media (max-width: 992px){
+
+    .boxForm {
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "formulario" "formulario" "iframe";
+    justify-items: center;
+    padding: 5px;
+    border: 2px solid black;
+
+    .form {
+        grid-area: formulario;
+    }
+
+    .iframe {
+        grid-area: iframe;
+        max-width: 250px;
+    }
+}
+}
